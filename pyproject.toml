@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64.0", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "xiaonan-web3"
+version = "1.0.1"
+description = "潇楠 Web3哨兵 API SDK - 封装文本对话、文生图、文生视频、TTS、播客、市场分析等20+功能"
+authors = [{name = "潇楠 Web3哨兵 实验室", email = "xiaonan@ming.store"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["web3", "ai", "api", "tts", "image-generation", "video-generation"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "requests>=2.28.0",
+]
+
+[project.urls]
+Homepage = "https://www.ming.store"
+Documentation = "https://www.ming.store/key/llm_api_docs.php"
+Repository = "https://github.com/pingdj/xiaonan-web3"
+
+[tool.setuptools]
+py-modules = ["client", "multimodal"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tools", "tools.*"]
